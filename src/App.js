@@ -45,8 +45,8 @@ function App() {
     <>
       <CssBaseline />
       <Header setCoordinates={setCoordinates} />
-      <Grid container spacing={3} style={{ width: "100%" }}>
-        <Grid item xs={12} md={4}>
+      <Grid container spacing={2} style={{ width: "100%" }}>
+        <Grid item xs={12} md={5} lg={4} order={{xs:2, md:1}}>
           <List
             places={filteredPlaces.length ? filteredPlaces : places}
             childClicked={childClicked}
@@ -57,7 +57,7 @@ function App() {
             setRating={setRating}
           />
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={7} lg={8} order={{xs:1, md:2}}>
           <Map
             coordinates={coordinates}
             setCoordinates={setCoordinates}

@@ -62,7 +62,7 @@ const Header = ({setCoordinates}) => {
   return (
     <AppBar position="static">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
+        <Typography variant="h5" >
           Travel Advisor
         </Typography>
         <Box display="flex">

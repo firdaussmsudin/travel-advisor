@@ -8,7 +8,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places, setChildClicked }
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
-    <Box sx={{ height: "85vh", width: "100%" }}>
+    <Box sx={{ height: "85vh", width: "100%",padding:"50px 0 20px 0" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyCjdRzCaS9JEmPfRR0vTuUQYdHgmyPWk1g" }}
         defaultCenter={coordinates}

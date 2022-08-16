@@ -38,8 +38,11 @@ const List = ({
   // }, [places]);
 
   return (
-    <Box p="25px 0 25px 25px">
-      <Typography variant="h4">
+    <Box sx={{
+      xs:{padding:"10px 0 0 10px"},
+      md:{padding:"25px 0 0 25px"}
+    }}>
+      <Typography variant="h4" sx={{fontSize:"2rem"}}>
         Restaurants, Hotels and Attractions around you
       </Typography>
       {isLoading ? (
@@ -72,7 +75,7 @@ const List = ({
               <MenuItem value={4.5}>Above 4.5</MenuItem>
             </Select>
           </CustomFormControl>
-          <Grid container sx={{ height: "60vh", overflow: "auto" }}>
+          <Grid container sx={{ height: "65vh", overflow: "auto" }}>
             {places?.map((place, i) => (
               <Grid item key={i} xs={12}>
                 <PlaceDetails
