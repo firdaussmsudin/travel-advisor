@@ -7,10 +7,11 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Map = ({ coordinates, setCoordinates, setBounds, places, setChildClicked }) => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
+
   return (
-    <Box sx={{ height: "85vh", width: "100%",padding:"50px 0 20px 0" }}>
+    <Box height="85vh" width="100%" padding={{xs:"50px 0 20px 20px",md:"50px 0 20px 0"}}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyCjdRzCaS9JEmPfRR0vTuUQYdHgmyPWk1g" }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_API_GOOGLE_MAPS_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}

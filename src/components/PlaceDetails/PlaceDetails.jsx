@@ -56,7 +56,7 @@ const PlaceDetails = ({ place, selected }) => {
           </Typography>
         </Box>
         {place?.awards?.map((award) => (
-          <Box display="flex" justifyContent="space-between" my={1}>
+          <Box display="flex" justifyContent="space-between" my={1} >
             <img src={award.images.small} alt={award.display_name} />
             <Typography variant="subtitle2" color="textSecondary">
               {award.display_name}
@@ -76,6 +76,7 @@ const PlaceDetails = ({ place, selected }) => {
               alignItems: "center",
               justifyContent: "space-between",
               marginTop: "10px",
+              textAlign:"right"
             }}
           >
             <PlaceIcon />
